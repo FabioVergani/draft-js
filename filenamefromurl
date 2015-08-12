@@ -1,0 +1,14 @@
+var file = "http://a.com/b/filename#hash";
+function file(url) {
+    var index = url.lastIndexOf("/") + 1;
+    var filenameWithExtension = url.substr(index);
+    var filename = filenameWithExtension.split(".")[0]; 
+    filename = filename.replace(/(#|\?).*?$/, "");
+    return filename;                                   
+}
+
+var file = (function () {
+        var a = window.location.href,
+            b = a.lastIndexOf("/");
+        return a.substr(b + 1);
+    }());
