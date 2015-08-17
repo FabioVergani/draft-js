@@ -1,5 +1,6 @@
-RawObject=Object.create.bind(null);
-RawObject({
-	'valueOf':{value:r},
-	'type':{value:k}
+var CreateRawObject=Object.create.bind(null,null);
+
+CreateRawObject({
+	'a':{value:1},//{value:undefined, writable:false, enumerable:false, configurable:false}
+	'b':{value:2}
  });
