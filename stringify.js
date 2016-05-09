@@ -1,3 +1,19 @@
+/*
+console.log(add.toSource());
+
+.toString()
+
+
+JSON.stringify({});                  // '{}'
+JSON.stringify(true);                // 'true'
+JSON.stringify('foo');               // '"foo"'
+JSON.stringify([1, 'false', false]); // '[1,"false",false]'
+JSON.stringify({ x: 5 });            // '{"x":5}'
+
+
+*/
+//
+
  function stringify(data, prefix) {
         function unicode_escape(c) {
             var s = c.charCodeAt(0).toString(16);
