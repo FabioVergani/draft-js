@@ -8,3 +8,16 @@ Sanitizing HTML
 		  $elt.removeAttr(attribName); 
 		}
 	}
+
+
+var el = document.getElementsByTagName('div');
+
+for (var i = 0; i < el.length; i++) {
+  var attr = el[i].attributes; /* get all attributes on the element */
+  for (var j = 0; j < attr.length; j++) {
+    if (attr[j].name.indexOf('data-') == 0) { /* if element has an attribute whose name has data- */
+      el[i].style.color = 'red';
+      break;
+    }
+  }
+}
