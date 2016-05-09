@@ -1,0 +1,10 @@
+Sanitizing HTML
+
+//filter out event handlers from attributes
+	var i = 0, attrib, attribName;
+	while (attrib = $elt.get(0).attributes[i++]) {
+		attribName = attrib.name;
+		if (/^on/i.test(attribName)) { 
+		  $elt.removeAttr(attribName); 
+		}
+	}
